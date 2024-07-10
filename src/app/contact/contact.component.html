@@ -1,0 +1,17 @@
+<p>contact works!</p>
+
+
+<div class="wrapper">
+    <ejs-chart3d width="800px" [primaryXAxis]="primaryXAxis" depth="500" rotation="0" tilt="0" title="Diversity Spend" [legendSettings]="legend" [tooltip]="tooltip">
+        <e-chart3d-series-collection>
+            <e-chart3d-series name="Diversity" [dataSource]="data" xName="x" yName="y" type="Column" [dataLabel]="dataLabel"></e-chart3d-series>
+        </e-chart3d-series-collection>
+    </ejs-chart3d>
+</div>
+<!-- <div class="wrapper">
+    <ejs-chart3d width="800px" [primaryXAxis]="primaryXAxis" depth="500" rotation="0" tilt="0" title="Diversity Spend" [legendSettings]="legend" [tooltip]="tooltip">
+        <e-chart3d-series-collection>
+            <e-chart3d-series name="Diversity" [dataSource]="data" xName="x" yName="y" type="Doughnut" [dataLabel]="dataLabel"></e-chart3d-series>
+        </e-chart3d-series-collection>
+    </ejs-chart3d>
+</div> -->

@@ -1,0 +1,69 @@
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(-45deg, #ff7e5f, #feb47b, #ffdfb9, #d9fbff);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 350px;
+    text-align: center;
+  }
+  
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 30% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .login-container input[type="text"],
+  .login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-container button:hover {
+    background-color: #45a049;
+  }
+  
+  .login-container .signup-link {
+    margin-top: 20px;
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .login-container .signup-link:hover {
+    color: #4CAF50;
+    cursor: pointer;
+  }
+  
