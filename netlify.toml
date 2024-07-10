@@ -1,7 +1,7 @@
 [build]
- command = "npm run build"
- publish = "/build"
- base = "/"
+  base = "/opt/build/repo"
+  command = "npm run build"
+  publish = "/opt/build/repo/dist/angular-with-backened"
 
  [[redirects]]
   from = "/*"
