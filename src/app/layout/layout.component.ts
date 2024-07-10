@@ -10,4 +10,8 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 })
 export class LayoutComponent {
 
+  logout() {
+    console.log( 'hiii' )
+  }
+
 }
