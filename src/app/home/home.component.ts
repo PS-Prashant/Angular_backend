@@ -22,10 +22,10 @@ export class HomeComponent implements OnInit {
   }
 
   getData() {
-    this.serverCallService.getData('get', undefined, 'localCall').subscribe({
+    this.serverCallService.getData('get', undefined, undefined).subscribe({
       next: (res) => {
         this.post = res;
-        console.log(res);
+        // console.log(res);
       },
       error: (err) => {
         console.log(err);
@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
     this.serverCallService.getUserData('get').subscribe({
       next: (res) => {
         this.userData = res;
-        console.log(res);
+        // console.log(res);
       },
       error: (err) => {
         console.log(err);
