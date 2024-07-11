@@ -16,16 +16,16 @@ export class ServerCallService {
   getData( methodType: string, payload?: any, requestFor?: requestCallType ): Observable<any> {
 
 	if ( requestFor == 'localCall' ) {
-		return ( this.http as any )[methodType]( 'http://localhost:3000/test', payload );
+		return ( this.http as any )[methodType]( 'http://localhost:3000/test', payload, { withCredentials: true } );
 	} else {
-		return ( this.http as any )[methodType]( 'https://learn-backened.onrender.com/test', payload );
+		return ( this.http as any )[methodType]( 'https://learn-backened.onrender.com/test', payload, { withCredentials: true } );
 	}
 	
   }
 
   accessLogin( methodType: string, payload?: any, requestFor?: requestCallType ): Observable<any> {
-	return ( this.http as any )['get']( 'https://learn-backened.onrender.com/test', payload );
-    // return ( this.http as any )[methodType]( 'http://localhost:8000/api/v1/users/login', payload, { withCredentials: true } );
+	// return ( this.http as any )['get']( 'https://learn-backened.onrender.com/test', payload , { withCredentials: true });
+    return ( this.http as any )[methodType]( 'http://localhost:8000/api/v1/users/login', payload, { withCredentials: true } );
   }
 
   getUserData( methodType: string = 'get' ): Observable<any>  {

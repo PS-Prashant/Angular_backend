@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   constructor(private serverCallService: ServerCallService) {}
 
   ngOnInit() {
-    // this.getData();
+    this.getData();
     this.getUserData();
   }
 
