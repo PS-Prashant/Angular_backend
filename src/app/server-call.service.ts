@@ -24,7 +24,8 @@ export class ServerCallService {
   }
 
   accessLogin( methodType: string, payload?: any, requestFor?: requestCallType ): Observable<any> {
-	return ( this.http as any )[methodType]( 'http://localhost:8000/api/v1/users/login', payload, { withCredentials: true } );
+	return ( this.http as any )['get']( 'https://learn-backened.onrender.com/test', payload );
+    // return ( this.http as any )[methodType]( 'http://localhost:8000/api/v1/users/login', payload, { withCredentials: true } );
   }
 
   getUserData( methodType: string = 'get' ): Observable<any>  {
